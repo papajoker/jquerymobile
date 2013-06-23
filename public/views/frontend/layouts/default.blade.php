@@ -22,7 +22,7 @@
 
 		<!-- CSS
 		================================================== -->
-		<link href="{{ asset('public/packages/papajoker/jquerymobile/css/jquery.mobile-1.3.1.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('packages/papajoker/jquerymobile/css/jquery.mobile-1.3.1.min.css') }}" rel="stylesheet">
 		
 
 		<style>
@@ -127,7 +127,7 @@
 
 		<!-- Javascripts
 		================================================== -->
-		<script src="{{ asset('public/packages/papajoker/jquerymobile/js/jquery.js') }}"></script>
-		<script src="{{ asset('public/packages/papajoker/jquerymobile/js/jquery.mobile-1.3.1.min.js') }}"></script>
+		<script src="{{ asset('packages/papajoker/jquerymobile/js/jquery.js') }}"></script>
+		<script src="{{ asset('packages/papajoker/jquerymobile/js/jquery.mobile-1.3.1.min.js') }}"></script>
 	</body>
 </html>
