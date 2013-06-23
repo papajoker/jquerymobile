@@ -21,9 +21,9 @@ test de packages css pour le starter-kit laravel 4
 
 -----
 
-##Installation manuelle
+##Installation 
 
-recupérer le starter-kit
+recupérer le starter-kit fr
 
 Ajouter le(s) framework au composer.json :
   "papajoker/bootstrap2" : "@dev",
@@ -32,26 +32,25 @@ Ajouter le(s) framework au composer.json :
 
 en ligne de commande, faire un `(php) composer(.phar) update`
 
-      php artisan publish --bench="papajoker/bootstrap2"
-      php artisan publish --bench="papajoker/bootstrap3"
-      php artisan publish --bench="papajoker/jquerymobile"
+      php artisan asset:publish
+	ou individuellement
+      php artisan asset:publish papajoker/bootstrap2
+      php artisan asset:publish papajoker/bootstrap3
+      php artisan asset:publish papajoker/jquerymobile
 
 -----
 
-Pour passer charger le frameworkcss  :
+##Configuration 
+
+Pour passer - charger le frameworkcss  :
 
 ###1) dans app/config.view.php
- remplacer 'paths' => array(__DIR__.'/../views'),`
- par `'paths' => array(public_path().'/packages/papajoker/jquerymobile/views'),`
-
-###2) dans app/start/global.php
-en 1ere ligne ajouter :
-`View::addLocation(app_path().'/views');`
+ remplacer `'paths' => array(__DIR__.'/../views'),`
+ par `'paths' => array(public_path().'/packages/papajoker/jquerymobile/views',app_path().'/views'),`
 
 >cette ligne est très importante :
 >dans app/config.view.php nous disont a laravel ou trouver les vues,
->dans app/start/global.php :
->nous lui demandons de charger les vues "normales"(/app/views/) si non trouvées dans le framework
+>nous lui demandons de charger les vues "normales"(/app/views/) si non trouvées dans le frameworkcss
 
 -----
 
